@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lock-Picking Techniques</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <!-- Navigation-->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="techniques.html">Techniques</a></li>
+      <li><a href="start.html">Get Started</a></li>
+      <li><a href="high-security.html">High-Security</a></li>
+    </ul>
+  </nav>
+
+  <!-- Intro-->
+  <div class="container">
+    <main class="main">
+      <h1>Techniques</h1>
+      <hr class="section-divider">
+      <p class="intro">
+        In the world of lock-sport, there are three foundational methods.
+         Each approach has its own applications, level of precision, and
+          learning curve. Read on to find out more about them all.
+      </p>
+      <hr class="section-divider">
+      <p class="highlight">Click a method below to see details</p>
+
+      <!-- List of types with toggles in JS-->
+      <ul id="method-list">
+        <li data-target="spp">Single-Pin Picking</li>
+        <li data-target="rake">Raking</li>
+        <li data-target="bump">Bumping</li>
+      </ul>
+
+      <div id="spp" class="detail">
+        <h2>Single-Pin Picking</h2>
+        <div class="method">
+          <img src="SPPmethod.jpg" alt="How to Single Pin Pick">
+          <p>While applying rotational tension, insert your pick and attempt to set pins 
+            one at a time, feeling for each binding pin as you work your way back. It’s 
+            precise, effective, and surprisingly quick in the hands of a skilled picker. 
+            This is a tried and true method preferred by professionals that works on 
+            virtually any pin-and-tumbler lock.</p>
+        </div>
+      </div>
+
+      <div id="rake" class="detail">
+        <h2>Raking</h2>
+        <ol>
+          <li>Insert your tension tool and apply light tension.</li>
+          <li>Rapidly insert and remove the rake to bounce pins above the shear line.</li>
+          <li>If you're successful, you'll feel your tension wrench give, and you can then turn it like a key to open.</li>
+        </ol>
+        <img src="RakingDiagram.jpg" alt="Diagram of Raking Process">
+
+        <div class="warning">
+          Raking can damage pins in delicate locks. Use gentle force.
+        </div>
+      </div>
+
+      <div id="bump" class="detail">
+        <h2>Bumping</h2>
+        <div class="method">
+          <img src="bumpkey.jpg" alt="Kwikset KW1 Bump Key with Rubber Ring">
+          <p>A specially cut key (bump key) is tapped to transfer kinetic energy upwards into the pins.
+            You may notice the key cuts are done very low and all at the same height. 
+             Apply rotational tension to the key while slightly bumping the back with a rubber mallet. 
+             Quick method that can open a lock in seconds, but it's noisy and requires a 
+             specially cut key. </p>
+            
+        </div>
+        <img src="bumpkeydiagram.png" alt="Diagram illustrating how bumping works">
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 Lock-Sport Community
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

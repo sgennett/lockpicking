@@ -1,0 +1,211 @@
+/* This makes things sooo handy! */ 
+:root {
+    --primary-color: slateblue;
+    --secondary-color: #f4f4f4;
+    --dark-color: #333;
+    --light-color: #fff;
+    --highlight-bg: #fffae6;
+    --warning-bg: #ffe6e6;
+    --warning-border: #e00;
+  }
+  
+  /* Global resets */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body and background */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    /* Gradient */
+    background-image: linear-gradient(
+      to bottom right,
+      #eef4ff,
+      #ffffff
+    );
+    color: var(--dark-color);
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin-right: 1rem;
+  }
+  nav ul li a {
+    color: var(--light-color);
+    font-weight: bold;
+  }
+  
+  /* Layout container */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr min(60ch, 100%) 1fr;
+  }
+  .main {
+    grid-column: 2;
+    padding: 1rem 0;
+  }
+
+  /* Headings */
+  h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .main h1 {
+    position: relative;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 2rem 0 2rem;
+    text-align: center;
+  }
+  
+  .main h1::before,
+  .main h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0.8rem auto;
+  }
+
+  .subtitle {
+    font-style: italic;
+    color: #555;
+    margin: 0.5em 0 1em;
+    font-size: 0.95em;
+  }
+  .intro {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  
+  /* Highlights & warnings */
+  .highlight {
+    background-color: var(--highlight-bg);
+    padding: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  .warning {
+    background-color: var(--warning-bg);
+    padding: 0.5rem;
+    border-left: 4px solid var(--warning-border);
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+  }
+  th {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-transform: uppercase;
+  }
+  tbody tr:nth-child(even) {
+    background-color: var(--secondary-color);
+  }
+  
+  figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 1.5rem;
+  }
+  
+  /* Section Divider */
+  .section-divider {
+    border: none;
+    height: 2px;
+    background: var(--primary-color);
+    opacity: 0.3;
+    margin: 2rem 0;
+  }
+
+  /* Techniques page */
+  #method-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  #method-list li {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  .detail {
+    display: none;
+    margin-top: 1rem;
+  }
+  .detail img {
+    max-width: 100%;
+    margin: 0.5rem 0;
+  }
+  .method {
+    display: flex;
+    gap: 1rem;
+  }
+  .method img {
+    max-width: 200px;
+  }
+  
+  /* Get Started page */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .tool-img {
+    width: 400px;  
+    max-width: 200%; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+    .container {
+      padding: 0 1rem;
+    }
+    #method-list, .method {
+      flex-direction: column;
+    }
+  }
+  
